@@ -14,6 +14,7 @@ body {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 2px 5px rgb(202, 227, 249, 0.8);
+    z-index: 1000;
 }
 
 .heading {
@@ -73,3 +74,13 @@ body {
     filter: contrast(0.4);
 }
 
+.login {
+    width: 300px;
+    background-color: white;
+    border: 2px solid blueviolet;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 15px;
+    position: fixed;
+    right: 50px;
+}
