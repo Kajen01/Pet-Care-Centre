@@ -1,12 +1,75 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
 
-body{
+body {
     background-color: aliceblue;
 }
 
 .header {
-    background-color: rgb(202, 227, 249);
+    top: 0px;
+    background: linear-gradient(90deg, rgba(133,193,254,0.47484035117953427) 3%, rgba(76,247,195,0.7045322279302346) 99%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgb(202, 227, 249, 0.8);
 }
+
+.heading {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.heading h1 {
+    margin-left: 10px;
+    font-size: 50px;
+    background: linear-gradient(90deg, rgba(127,112,231,1) 0%, rgba(195,76,157,1) 88%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.5s ease;
+}
+
+.heading h1:hover {
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+.navigator {
+    display: flex;
+    justify-content: space-around;
+    margin-left: -50px;
+    width: 500px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.navigator p {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.navigator p:hover {
+    transform: scale(1.1);
+    text-decoration: underline;
+    color: rgb(0, 0, 255);
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.options img {
+    margin-right: 30px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.options img:hover {
+    transform: scale(1.15);
+    filter: contrast(0.4);
+}
+
