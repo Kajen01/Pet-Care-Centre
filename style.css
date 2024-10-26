@@ -12,18 +12,46 @@ body {
     background-color: aliceblue;
     font-family: "Nunito", sans-serif;
     font-optical-sizing: auto;
-    margin-top: 100px;
 }
 
 .no-scroll {
     overflow: hidden;
 }
 
+.startover {
+    text-decoration: none;
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+    border: none;
+    font-size: 75px;
+    font-weight: 900;
+    transform: rotate(90deg);
+    z-index: 2000;
+    text-shadow: 0px 0px 4px black;
+    animation: blink0 2s infinite;
+}
+
+@keyframes blink0 {
+
+    0%,
+    100% {
+        color: rgb(198, 4, 252);
+    }
+
+    50% {
+        color: red;
+    }
+}
+
+.startover:hover {
+    animation: none;
+    color: rgb(81, 255, 0);
+}
+
 /* Header section */
 
 .header {
-    position: fixed;
-    top: 0px;
     width: 100vw;
     background-color: rgb(213, 234, 253);
     display: flex;
@@ -107,7 +135,7 @@ body {
     background-color: black;
     width: 100vw;
     height: 550px;
-    opacity: 0.3;
+    opacity: 0.4;
     z-index: 1000;
 }
 
@@ -247,14 +275,13 @@ body {
 .homepage img {
     position: absolute;
     left: -500px;
-    top: 40px;
 }
 
 .hometitle {
     position: relative;
     font-size: 90px;
     font-weight: 900;
-    top: 90px;
+    top: 10px;
     left: 600px;
     text-shadow:
         -1px -1px 0 rgba(0, 179, 255, 0.359),
@@ -269,15 +296,10 @@ body {
     display: inline;
     font-size: 40px;
     font-weight: 900;
-    top: 110px;
     left: 860px;
     background: linear-gradient(90deg, rgba(255, 122, 199, 0.9818431522999825) 0%, rgba(16, 255, 227, 1) 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.homeend {
-    margin-top: 350px;
 }
 
 .fordogs,
@@ -290,7 +312,7 @@ body {
     padding: 8px;
     font-size: 35px;
     letter-spacing: 1px;
-    top: 120px;
+    top: 65px;
     left: 800px;
     margin-left: 20px;
     border-radius: 0 15px 15px 15px;
@@ -341,15 +363,25 @@ body {
     color: white;
 }
 
+.food2 {
+    position: relative;
+    left: 850px;
+    top: 75px;
+    opacity: 0.8;
+}
+
+.homeend {
+    padding-bottom: -150px;
+}
+
 /* About section */
 
 .aboutus {
-    margin-top: 460px;
     text-align: center;
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding-bottom: 80px;
+    padding-bottom: 50px;
 }
 
 .aboutus h1 {
@@ -371,12 +403,96 @@ body {
     border-radius: 30px;
 }
 
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 50px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    border: 2.5px solid black;
+    transition: all 1s easy;
+    cursor: context-menu;
+    width: 280px;
+    height: 150px;
+    padding: 20px;
+    background-color: white;
+}
+
+.card h1 {
+    font-size: 35px;
+    font-weight: 800;
+    color: orangered;
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
+
+.card p {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#c1,
+#c3 {
+    animation: blink3 5s infinite;
+}
+
+#c2 {
+    animation: blink4 5s infinite;
+}
+
+@keyframes blink3 {
+
+    0%,
+    100% {
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+    }
+
+    50% {
+        background-color: white;
+        color: black;
+    }
+}
+
+@keyframes blink4 {
+    50% {
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+    }
+
+    0%,
+    100% {
+        background-color: white;
+        color: black;
+    }
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 2px 5px black;
+}
+
+#c1:hover,
+#c2:hover,
+#c3:hover {
+    animation: none;
+}
+
 .about {
     display: flex;
     flex-direction: row;
     padding-left: 50px;
     padding-right: 20px;
     padding-bottom: 50px;
+    padding-top: 50px;
 }
 
 .aboutinfo {
@@ -427,6 +543,64 @@ body {
     font-weight: 900;
 }
 
+/* Prices */
+.price {
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.priceinfo {
+    display: flex;
+    flex-direction: column;
+    padding-left: 200px;
+}
+
+.priceinfo h1 {
+    font-size: 60px;
+    font-weight: 900;
+    padding-top: 40px;
+}
+
+.priceinfo p {
+    padding-top: 15px;
+    font-size: 25px;
+    font-weight: 500;
+    width: 500px;
+}
+
+.amount {
+    font-weight: 700;
+    font-size: 40px;
+    padding-top: 20px;
+}
+
+.buy,
+.buymore {
+    cursor: pointer;
+    border: 3px solid black;
+    width: 250px;
+    padding: 8px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    border-radius: 0 15px 15px 15px;
+    margin-top: 30px;
+    margin-left: 3px;
+}
+
+.buy {
+    animation: blink1 1.2s infinite;
+}
+
+.buy:hover,
+.buymore:hover {
+    animation: none;
+    background-color: orangered;
+    color: white;
+}
+
 /* Cat Boarding */
 
 .catboarding,
@@ -475,7 +649,7 @@ body {
     align-items: end;
     width: 140px;
     border-radius: 20px;
-    border: 2.5px solid black;
+    border: 2px solid rgb(0, 115, 255);
     padding: 15px;
     gap: 10px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

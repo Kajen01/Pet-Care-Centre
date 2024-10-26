@@ -14,8 +14,9 @@
 </head>
 
 <body>
+    <a href="#startover" class="startover">⟪⟪</a>
     <!-- Header section -->
-    <header class="header">
+    <header class="header" id="startover">
         <div class="heading">
             <img src="./images/animal.png" width="40px" height="40px" alt="Foot print icon">
             <h1>Pet Care</h1>
@@ -98,15 +99,39 @@
             <button class="forcats">FOR CATS</button>
         </div>
     </div>
+    <img src="./images/food2.png" alt="Food image" class="food2">
     <div class="homeend" id="about"></div>
 
     <!-- About section -->
     <div class="aboutus">
         <h1>About Us</h1>
         <div class="brline"></div>
-        <p>From the time our friends sniff their way through the door until they wag their tails out in the afternoon, we cater to their nature.</p>
+        <p>From the time our friends sniff their way through the door until they wag their tails out in the afternoon,
+            we cater to their nature.</p>
     </div>
-    <div class="about">
+
+    <div class="cards">
+        <div class="card" id="c1">
+            <h1>Location</h1>
+            <p>35/7, St. Rita's Road,</p>
+            <p>Mount-Lavinia,</p>
+            <p>Colombo.</p>
+        </div>
+        <div class="card" id="c2">
+            <h1>Contact</h1>
+            <p>Phone Numbers,</p>
+            <p>074 074 9695</p>
+            <p>075 074 9652</p>
+        </div>
+        <div class="card" id="c3">
+            <h1>Check-in Time</h1>
+            <p>From: 8 AM</p>
+            <p>To: 9 PM</p>
+        </div>
+    </div>
+
+    <!-- Shop section -->
+    <div class="about" id="shop">
         <div class="aboutinfo">
             <p class="aboutheading"><span style="color: orangered;">Premium</span> Pet Food Manufacturer</p>
             <div class="infocontainer">
@@ -131,8 +156,37 @@
         <img class="foodimg" src="./images/food.png" alt="food image" width="650px">
     </div>
 
+    <div class="prices">
+        <div class="price">
+            <img src="./images/price11.png" alt="Dog Food price" width="650px">
+            <div class="priceinfo">
+                <h1><span style="color: orangered">Air-Dried </span><br>Dog Food</h1>
+                <p>Handcrafted air-dried recipes with high inclusions of meat, seafood, organs, and bone in whole-prey
+                    ratios.</p>
+                <h3 class="amount">Rs. 500.00 - Rs. 3500.00</h3>
+                <div>
+                    <button class="buy">BUY</button>
+                    <button class="buymore">VIEW MORE</button>
+                </div>
+            </div>
+        </div>
+        <div class="price">
+            <div class="priceinfo">
+                <h1><span style="color: orangered">Air-Dried </span><br>Cat Food</h1>
+                <p>Handcrafted air-dried recipes with high inclusions of meat, seafood, organs, and bone in whole-prey
+                    ratios.</p>
+                <h3 class="amount">Rs. 350.00 - Rs. 3200.00</h3>
+                <div>
+                    <button class="buy">BUY</button>
+                    <button class="buymore">VIEW MORE</button>
+                </div>
+            </div>
+            <img src="./images/price22.png" alt="Dog Food price" width="650px">
+        </div>
+    </div>
+
     <!-- Cat Boarding -->
-    <div class="catboarding">
+    <div class="catboarding" id="services">
         <img src="./images/hero_image_02.png" alt="cat image" class="catboardingimg" width="800px">
         <div class="catcontainer">
             <h2>Cat <span style="color: orangered;">Boarding</span></h2>
@@ -186,6 +240,8 @@
         </div>
         <img src="./images/hero_image_01.png" alt="cat image" class="dogkennelsimg" width="800px">
     </div>
+
+
 
 
     <script src="script.js"></script>
