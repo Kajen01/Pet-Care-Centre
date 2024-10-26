@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet-Care-Centre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Header section -->
-     <header class="header">
+    <header class="header">
         <div class="heading">
             <img src="./images/animal.png" width="40px" height="40px" alt="Foot print icon">
             <h1>Pet Care</h1>
         </div>
-        <div class="navigator">
+        <div class="navigators">
             <p>Home</p>
             <p>About</p>
             <p>Shop</p>
@@ -22,28 +29,70 @@
             <p>Contact</p>
         </div>
         <div class="options">
-            <img src="./images/store.png" width="40px" height="40px" alt="store icon">
-            <img src="./images/contact.png" width="40px" height="40px" alt="contact icon">
+            <img class="menu" onclick="navigatorFun()" src="./images/menu.png" width="40px" height="40px" alt="menu icon">
+            <img class="cart" src="./images/store.png" width="40px" height="40px" alt="store icon">
+            <img class="user" onclick="signinFun()" src="./images/contact.png" width="40px" height="40px"
+                alt="contact icon">
         </div>
-     </header>
-     <div class="login">
-        <form action="" class="loginform">
+    </header>
+
+    <!-- user section -->
+    <div class="blurbackground"></div>
+    <div class="signin">
+        <form action="" class="signinform" onsubmit="handleSubmit(event)">
             <h3>Sign In</h3>
-            <input type="email" name="" class="email" placeholder="Enter your e-mail">
-            <input type="password" name="" class="password" placeholder="Enter your password">
-            
-            <input type="checkbox" name="" class="remember">
-            <p>Remember Me</p>
+            <input type="email" name="" class="email" placeholder="Enter your e-mail" required>
+            <input type="password" name="" class="password1" placeholder="Enter your password" required>
+            <div class="remember">
+                <input type="checkbox" name="" checked>
+                <p>Remember Me</p>
+            </div>
+            <button type="submit" class="submit" onclick="submitFun()">Submit</button>
+            <div class="bottomline">
+                <p class="forgetclick" onclick="forgetFun()">Forget Password</p>
+                <p class="signupclick" onclick="signupFun()">Sign Up</p>
+            </div>
         </form>
-     </div>
+    </div>
+    <div class="signup">
+        <form action="" class="signupform" onsubmit="handleSubmit(event)">
+            <h3>Sign Up</h3>
+            <input type="text" class="name" placeholder="Enter your name">
+            <input type="email" name="" class="email" placeholder="Enter your e-mail" required>
+            <input type="tel" name="" class="phonenumber" placeholder="Enter your phone number" required
+                pattern="[0-9]{10,10}">
+            <input type="password" name="" class="password1" placeholder="Enter your password" required>
+            <input type="password" name="" class="password2" placeholder="Confirm your password" required>
+            <div class="remember">
+                <input type="checkbox" name="">
+                <p>Remember Me</p>
+            </div>
+            <button type="submit" class="submit" onclick="submitFun()">Submit</button>
+        </form>
+    </div>
+    <div class="forget">
+        <form action="" class="forgetform" onsubmit="handleSubmit(event)">
+            <h3>Forget Password</h3>
+            <input type="email" name="" class="email" placeholder="Enter your e-mail" required>
+            <input type="tel" name="" class="phonenumber" placeholder="Enter your phone number" required
+                pattern="[0-9]{10,10}">
+            <button type="submit" class="send" onclick="sendFun()">Send</button>
+        </form>
+    </div>
+    <div class="sendmessage">
+        <form action="" class="sendmessageform" onsubmit="handleSubmit(event)">
+            <p>Your request has been sent. Please check your email.</p>
+            <button type="submit" class="done" onclick="doneFun()">Done</button>
+        </form>
+    </div>
 
-     <!-- nav section -->
-      <nav class="nav-bar">
-        
-      </nav>
+    <!-- Home -->
+    <div class="homepage">
 
+    </div>
 
 
     <script src="script.js"></script>
 </body>
+
 </html>
