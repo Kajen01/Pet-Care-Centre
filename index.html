@@ -21,22 +21,23 @@
             <h1>Pet Care</h1>
         </div>
         <div class="navigators">
-            <p>Home</p>
-            <p>About</p>
-            <p>Shop</p>
-            <p>Services</p>
-            <p>Plan</p>
-            <p>Contact</p>
+            <a href="#homepage">Home</a>
+            <a href="#about">About</a>
+            <a href="#shop">Shop</a>
+            <a href="#services">Services</a>
+            <a href="#plan">Plan</a>
+            <a href="#contact">Contact</a>
         </div>
         <div class="options">
-            <img class="menu" onclick="navigatorFun()" src="./images/menu.png" width="40px" height="40px" alt="menu icon">
+            <img class="menu" onclick="navigatorFun()" src="./images/menu.png" width="40px" height="40px"
+                alt="menu icon">
             <img class="cart" src="./images/store.png" width="40px" height="40px" alt="store icon">
             <img class="user" onclick="signinFun()" src="./images/contact.png" width="40px" height="40px"
                 alt="contact icon">
         </div>
     </header>
 
-    <!-- user section -->
+    <!-- User section -->
     <div class="blurbackground"></div>
     <div class="signin">
         <form action="" class="signinform" onsubmit="handleSubmit(event)">
@@ -87,8 +88,103 @@
     </div>
 
     <!-- Home -->
-    <div class="homepage">
+    <div class="homepage" id="homepage">
+        <img src="./images/hero_image_06.png" alt="Home Dog image" width="100%">
+        <p class="hometitle"><span style="color: rgb(255, 0, 115);">Hi</span> Welcome To <br> Our Pet Shop</p>
+        <br>
+        <p class="homeinfo">PREMIUM AIR-DRIED, <br> LOCALY PRODUCED <br> TASTY & <br>FRESH PET FOOD</p>
+        <div class="homebuttons">
+            <button class="fordogs">FOR DOGS</button>
+            <button class="forcats">FOR CATS</button>
+        </div>
+    </div>
+    <div class="homeend" id="about"></div>
 
+    <!-- About section -->
+    <div class="aboutus">
+        <h1>About Us</h1>
+        <div class="brline"></div>
+        <p>From the time our friends sniff their way through the door until they wag their tails out in the afternoon, we cater to their nature.</p>
+    </div>
+    <div class="about">
+        <div class="aboutinfo">
+            <p class="aboutheading"><span style="color: orangered;">Premium</span> Pet Food Manufacturer</p>
+            <div class="infocontainer">
+                <div class="infoitem">
+                    <img src="./images/heart.png" alt="heart icon" width="80px">
+                    <p>SUPERIOR SAFETY PRACTICES</p>
+                </div>
+                <div class="infoitem">
+                    <img src="./images/leg-piece.png" alt="leg-piece icon" width="80px">
+                    <p>EXCEPTIONAL INGREDIENT QUALITY</p>
+                </div>
+                <div class="infoitem">
+                    <img src="./images/thermometer.png" alt="thermometer icon" width="80px">
+                    <p>OPTIMAL DRYING AIR TEMPERATURES</p>
+                </div>
+                <div class="infoitem">
+                    <img src="./images/trophy.png" alt="trophy icon" width="80px">
+                    <p>MADE BY NUTRITION EXPERTS</p>
+                </div>
+            </div>
+        </div>
+        <img class="foodimg" src="./images/food.png" alt="food image" width="650px">
+    </div>
+
+    <!-- Cat Boarding -->
+    <div class="catboarding">
+        <img src="./images/hero_image_02.png" alt="cat image" class="catboardingimg" width="800px">
+        <div class="catcontainer">
+            <h2>Cat <span style="color: orangered;">Boarding</span></h2>
+            <p>We offer long-term and short-term boarding. Every cat family has their own private, spacious room and
+                daily individual time in our large play room for even the fussiest feline.</p>
+            <div class="caticons">
+                <div class="eat">
+                    <img src="./images/fish.png" alt="Fish image" width="65px">
+                    <p>EAT</p>
+                </div>
+                <div class="play">
+                    <img src="./images/mouse.png" alt="Mouse image" width="65px">
+                    <p>PLAY</p>
+                </div>
+                <div class="sleep">
+                    <img src="./images/catsleep.jpg" alt="Sleep Bed image" width="65px">
+                    <p>SLEEP</p>
+                </div>
+            </div>
+            <div class="catbutton">
+                <button class="booking">BOOK NOW</button>
+                <button class="viewmore">VIEW MORE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dog Kennels -->
+    <div class="dogkennels">
+        <div class="dogcontainer">
+            <h2>Dog <span style="color: orangered;">Kennels</span></h2>
+            <p>Designed so animals can relax & indulge in pet stylists, run around our exercise yards, make new friends
+                in doggy daycare, or simply spend hours in our dog grooming salon.</p>
+            <div class="dogicons">
+                <div class="eat">
+                    <img src="./images/dogfood.jpg" alt="Fish image" width="65px">
+                    <p>EAT</p>
+                </div>
+                <div class="play">
+                    <img src="./images/ball.png" alt="Mouse image" width="65px">
+                    <p>PLAY</p>
+                </div>
+                <div class="sleep">
+                    <img src="./images/dogsleep.jpg" alt="Sleep Bed image" width="65px">
+                    <p>SLEEP</p>
+                </div>
+            </div>
+            <div class="dogbutton">
+                <button class="booking">BOOK NOW</button>
+                <button class="viewmore">VIEW MORE</button>
+            </div>
+        </div>
+        <img src="./images/hero_image_01.png" alt="cat image" class="dogkennelsimg" width="800px">
     </div>
 
 

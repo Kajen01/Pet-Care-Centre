@@ -3,15 +3,29 @@
     padding: 0px;
 }
 
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 body {
     background-color: aliceblue;
     font-family: "Nunito", sans-serif;
     font-optical-sizing: auto;
+    margin-top: 100px;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
+/* Header section */
+
 .header {
+    position: fixed;
     top: 0px;
-    background: linear-gradient(90deg, rgba(177, 230, 252, 0.3768011354932598) 0%, rgba(76, 247, 195, 0.7045322279302346) 99%);
+    width: 100vw;
+    background-color: rgb(213, 234, 253);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,15 +62,20 @@ body {
     font-weight: 700;
 }
 
-.navigators p {
+.navigators a {
     transition: all 0.3s ease;
     cursor: pointer;
+    text-decoration: none;
 }
 
-.navigators p:hover {
+.navigators a:hover {
     transform: scale(1.1);
     text-decoration: underline;
     color: rgb(0, 0, 255);
+}
+
+.navigators a.active {
+    color: orangered;
 }
 
 .options {
@@ -67,7 +86,7 @@ body {
 
 .options img {
     margin-right: 30px;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
     cursor: pointer;
 }
 
@@ -80,13 +99,16 @@ body {
     display: none;
 }
 
+/* User section */
+
 .blurbackground {
     display: none;
     position: fixed;
     background-color: black;
     width: 100vw;
-    height: 540px;
+    height: 550px;
     opacity: 0.3;
+    z-index: 1000;
 }
 
 .sendmessage,
@@ -101,7 +123,8 @@ body {
     padding: 20px;
     position: fixed;
     right: 50px;
-    color: coral;
+    color: orangered;
+    z-index: 1000;
 }
 
 .signin {
@@ -219,25 +242,371 @@ body {
     cursor: pointer;
 }
 
+/* Home */
 
+.homepage img {
+    position: absolute;
+    left: -500px;
+    top: 40px;
+}
+
+.hometitle {
+    position: relative;
+    font-size: 90px;
+    font-weight: 900;
+    top: 90px;
+    left: 600px;
+    text-shadow:
+        -1px -1px 0 rgba(0, 179, 255, 0.359),
+        1px -1px 0 rgba(0, 179, 255, 0.359),
+        -1px 1px 0 rgba(0, 179, 255, 0.359),
+        1px 1px 0 rgba(0, 179, 255, 0.359);
+    display: inline;
+}
+
+.homeinfo {
+    position: relative;
+    display: inline;
+    font-size: 40px;
+    font-weight: 900;
+    top: 110px;
+    left: 860px;
+    background: linear-gradient(90deg, rgba(255, 122, 199, 0.9818431522999825) 0%, rgba(16, 255, 227, 1) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.homeend {
+    margin-top: 350px;
+}
+
+.fordogs,
+.forcats {
+    cursor: pointer;
+    position: relative;
+    display: inline;
+    border: 3px solid black;
+    width: 250px;
+    padding: 8px;
+    font-size: 35px;
+    letter-spacing: 1px;
+    top: 120px;
+    left: 800px;
+    margin-left: 20px;
+    border-radius: 0 15px 15px 15px;
+}
+
+.fordogs {
+    animation: blink1 1.2s infinite;
+}
+
+.forcats {
+    animation: blink2 1.2s infinite;
+
+}
+
+@keyframes blink1 {
+
+    0%,
+    100% {
+        background-color: rgb(255, 145, 0);
+        color: white;
+    }
+
+    50% {
+        background-color: rgb(255, 187, 0);
+        color: black;
+    }
+}
+
+@keyframes blink2 {
+    50% {
+        background-color: rgb(255, 145, 0);
+        color: white;
+    }
+
+    0%,
+    100% {
+        background-color: rgb(255, 187, 0);
+        color: black;
+    }
+}
+
+.fordogs:focus,
+.fordogs:hover,
+.forcats:focus,
+.forcats:hover {
+    animation: none;
+    background-color: orangered;
+    color: white;
+}
+
+/* About section */
+
+.aboutus {
+    margin-top: 460px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 80px;
+}
+
+.aboutus h1 {
+    font-size: 50px;
+    font-weight: 800;
+    font-family: cursive;
+}
+
+.aboutus p {
+    width: 650px;
+    font-size: 30px;
+    font-weight: 500;
+    padding-top: 20px;
+}
+
+.brline {
+    width: 300px;
+    border-bottom: 5px solid orangered;
+    border-radius: 30px;
+}
+
+.about {
+    display: flex;
+    flex-direction: row;
+    padding-left: 50px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+}
+
+.aboutinfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.infocontainer {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 600px;
+    gap: 20px;
+}
+
+.infoitem {
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+    border-radius: 20px;
+    border: 2px solid black;
+    padding: 15px;
+    transition: all 0.3s easy;
+    cursor: context-menu;
+    align-items: center;
+}
+
+.infoitem:hover {
+    background-color: white;
+    box-shadow: 0px 1px 5px black;
+    transform: scale(1.1);
+    color: orangered;
+}
+
+.infoitem p {
+    padding-left: 20px;
+    font-size: larger;
+    font-weight: 700;
+}
+
+.foodimg {
+    border-radius: 50px;
+}
+
+.aboutheading {
+    font-size: 70px;
+    font-weight: 900;
+}
+
+/* Cat Boarding */
+
+.catboarding,
+.dogkennels {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    background-color: white;
+    border-radius: 50px;
+    padding-bottom: 50px;
+}
+
+.catcontainer,
+.dogcontainer {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.catcontainer h2,
+.dogcontainer h2 {
+    font-size: 70px;
+    font-weight: 900;
+}
+
+.catcontainer p,
+.dogcontainer p {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.caticons,
+.dogicons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding-top: 30px;
+}
+
+.eat,
+.play,
+.sleep {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    width: 140px;
+    border-radius: 20px;
+    border: 2.5px solid black;
+    padding: 15px;
+    gap: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(255, 0, 123);
+    font-weight: 100;
+}
+
+.eat:hover,
+.play:hover,
+.sleep:hover {
+    box-shadow: 0px 2px 5px black;
+}
+
+.booking,
+.viewmore {
+    cursor: pointer;
+    border: 3px solid black;
+    width: 250px;
+    padding: 8px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin-left: 18px;
+    border-radius: 15px;
+    margin-top: 40px;
+}
+
+.booking {
+    animation: blink1 1.2s infinite;
+}
+
+.booking:hover,
+.viewmore:hover {
+    animation: none;
+    background-color: orangered;
+    color: white;
+}
+
+/* Dog Kennels */
+
+.dogkennels {
+    padding-left: 20px;
+}
+
+.dogkennelsimg {
+    margin-left: -20px;
+}
 
 
 
 
 @media screen and (max-width: 768px) {
     .menu {
-        display: block;
+        display: inline;
     }
 
     .navigators {
         display: none;
-        font-size: 22px;
-        font-weight: 700;
         position: relative;
         right: -85px;
         top: 150px;
         width: fit-content;
         padding: 20px;
-        background-color: rgba(255, 0, 0, 0.228);
+        background-color: rgba(0, 255, 200, 0.975);
+        z-index: 1000;
+        border-radius: 20px;
+    }
+
+    .hometitle {
+        font-size: 60px;
+        top: 30px;
+        left: 10px;
+    }
+
+    .homeinfo {
+        font-size: 20px;
+        font-weight: 900;
+        top: 55px;
+        left: 10px;
+        background: linear-gradient(90deg, rgba(148, 49, 176, 0.9818431522999825) 12%, rgba(18, 32, 156, 1) 100%, rgba(255, 16, 233, 1) 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .fordogs,
+    .forcats {
+        top: 55px;
+        left: 40px;
+        font-size: 20px;
+    }
+
+    .homeend {
+        margin-top: 100px;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aboutinfo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .infocontainer {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        padding-left: 50px;
+    }
+
+    .infoitem {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 300px;
+    }
+
+    .infoitem p {
+        padding-left: 20px;
+        font-size: larger;
+        font-weight: 700;
+    }
+
+    .foodimg {
+        width: 450px;
+        padding-top: 20px;
+    }
+
+    .aboutheading {
+        font-size: 50px;
+        font-weight: 900;
     }
 }

@@ -17,6 +17,13 @@ function refreshOnResize() {
 }
 window.addEventListener('resize', refreshOnResize);
 
+function disableScroll() {
+    document.body.classList.add('no-scroll');
+}
+
+function enableScroll() {
+    document.body.classList.remove('no-scroll');
+}
 
 // User section
 const blurbackground = document.getElementsByClassName('blurbackground')[0]
@@ -30,6 +37,7 @@ function signinFun() {
         doneFun()
     }
     else {
+        disableScroll()
         blurbackground.style.display = 'block'
         signin.style.display = 'block'
         signup.style.display = 'none'
@@ -39,6 +47,7 @@ function signinFun() {
 }
 
 function signupFun() {
+    disableScroll()
     blurbackground.style.display = 'block'
     signin.style.display = 'none'
     signup.style.display = 'block'
@@ -47,6 +56,7 @@ function signupFun() {
 }
 
 function submitFun() {
+    enableScroll()
     blurbackground.style.display = 'none'
     signin.style.display = 'none'
     signup.style.display = 'none'
@@ -55,6 +65,7 @@ function submitFun() {
 }
 
 function forgetFun() {
+    disableScroll()
     blurbackground.style.display = 'block'
     signin.style.display = 'none'
     signup.style.display = 'none'
@@ -63,6 +74,7 @@ function forgetFun() {
 }
 
 function sendFun() {
+    disableScroll()
     blurbackground.style.display = 'block'
     signin.style.display = 'none'
     signup.style.display = 'none'
@@ -71,6 +83,7 @@ function sendFun() {
 }
 
 function doneFun() {
+    enableScroll()
     blurbackground.style.display = 'none'
     signin.style.display = 'none'
     signup.style.display = 'none'
