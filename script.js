@@ -98,11 +98,11 @@ function handleSubmit(event) {
 // Link with forDogs
 const forDogs = document.getElementsByClassName('fordogs')[0]
 forDogs.addEventListener('click', function () {
-    window.location.href = './forDogs.html'
+    window.open('./forDogs.html', '_blank');
 })
 
 
 const forCats = document.getElementsByClassName('forcats')[0]
 forCats.addEventListener('click', function () {
-    window.location.href = './forCats.html'
+    window.open('./forCats.html', '_blank');
 })

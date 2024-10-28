@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        nav {
+            background-color: #f8f9fa;
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        div {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#forDogs" class="scroll">For Dogs</a></li>
+            <li><a href="#forCats" class="scroll">For Cats</a></li>
+        </ul>
+    </nav>
+
+    <div id="forDogs"></div>
+    <div id="forCats"></div>
+
+    <script>
+        function loadComponent(id, file) {
+            fetch(file)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById(id).innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error loading component:', error);
+                    document.getElementById(id).innerHTML = '<p>Error loading content. Please try again later.</p>';
+                });
+        }
+
+        // Load all components
+        loadComponent('forDogs', './forDogs.html');
+        loadComponent('forCats', './forCats.html');
+    </script>
+</body>
+</html>
