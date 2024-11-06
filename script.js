@@ -106,3 +106,54 @@ const forCats = document.getElementsByClassName('forcats')[0]
 forCats.addEventListener('click', function () {
     window.open('./forCats.html', '_blank');
 })
+
+const buyButtons = document.getElementsByClassName('buy');
+const buymoreButtons = document.getElementsByClassName('buymore');
+
+for (let i = 0; i < buyButtons.length; i++) {
+    buyButtons[i].addEventListener('click', function () {
+        window.open('./forShop.html', '_blank');
+    });
+}
+
+for (let i = 0; i < buymoreButtons.length; i++) {
+    buymoreButtons[i].addEventListener('click', function () {
+        window.open('./forShop.html', '_blank');
+    });
+}
+
+const bookingButtons = document.getElementsByClassName('booking');
+const viewmoreButtons = document.getElementsByClassName('viewmore');
+
+for (let i = 0; i < bookingButtons.length; i++) {
+    bookingButtons[i].addEventListener('click', function () {
+        window.open('./forPlans.html', '_blank');
+    });
+}
+
+for (let i = 0; i < viewmoreButtons.length; i++) {
+    viewmoreButtons[i].addEventListener('click', function () {
+        window.open('./forPlans.html', '_blank');
+    });
+}
+
+const planbookButtons = document.getElementsByClassName('planbook');
+const planmoreButtons = document.getElementsByClassName('planmore');
+
+for (let i = 0; i < planbookButtons.length; i++) {
+    planbookButtons[i].addEventListener('click', function () {
+        window.open('./forPlans.html', '_blank');
+    });
+}
+
+for (let i = 0; i < planmoreButtons.length; i++) {
+    planmoreButtons[i].addEventListener('click', function () {
+        window.open('./forPlans.html', '_blank');
+    });
+}
+
+// Clear the input of Subscribe
+const subscribemail = document.getElementsByClassName('subscribemail')[0]
+function clearInput() {
+    subscribemail.value = "";
+}

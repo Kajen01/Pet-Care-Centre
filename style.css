@@ -19,6 +19,12 @@ body {
     height: 100%;
 }
 
+html.no-scroll {
+    overflow: hidden;
+}
+
+/* Start-over */
+
 .startover {
     text-decoration: none;
     position: fixed;
@@ -86,7 +92,7 @@ body {
     display: flex;
     justify-content: space-around;
     margin-left: -50px;
-    width: 550px;
+    width: 650px;
     font-size: 24px;
     font-weight: 700;
 }
@@ -481,6 +487,8 @@ body {
     animation: none;
 }
 
+/* Shop section */
+
 .about {
     display: flex;
     flex-direction: row;
@@ -538,7 +546,7 @@ body {
     font-weight: 900;
 }
 
-/* Prices */
+/* Price section */
 .price {
     background-color: white;
     border-radius: 30px;
@@ -761,6 +769,7 @@ body {
 }
 
 /* Plan */
+
 .plans {
     display: flex;
     flex-direction: row;
@@ -903,10 +912,16 @@ body {
 .contacticons img {
     transition: all 0.5s ease;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .contacticons img:hover {
     transform: scale(1.3);
+}
+
+.terms {
+    margin-top: 60px;
+    text-align: center;
 }
 
 .box2,
@@ -960,12 +975,25 @@ body {
     border-radius: 50px;
     background-color: rgb(147, 244, 244);
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .subscribe:hover {
     background-color: orangered;
     color: white;
 }
+
+.box4 p {
+    margin-top: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.box4 p:hover {
+    text-decoration: underline;
+}
+
+/* Media query */
 
 @media screen and (max-width: 768px) {
     .menu {

@@ -1,54 +1,138 @@
- <!-- Shop section -->
- <div class="about" id="shop">
-    <div class="aboutinfo">
-        <p class="aboutheading"><span style="color: orangered;">Premium</span> Pet Food Manufacturer</p>
-        <div class="infocontainer">
-            <div class="infoitem">
-                <img src="./images/heart.png" alt="heart icon" width="80px">
-                <p>SUPERIOR SAFETY PRACTICES</p>
-            </div>
-            <div class="infoitem">
-                <img src="./images/leg-piece.png" alt="leg-piece icon" width="80px">
-                <p>EXCEPTIONAL INGREDIENT QUALITY</p>
-            </div>
-            <div class="infoitem">
-                <img src="./images/thermometer.png" alt="thermometer icon" width="80px">
-                <p>OPTIMAL DRYING AIR TEMPERATURES</p>
-            </div>
-            <div class="infoitem">
-                <img src="./images/trophy.png" alt="trophy icon" width="80px">
-                <p>MADE BY NUTRITION EXPERTS</p>
-            </div>
-        </div>
-    </div>
-    <img class="foodimg" src="./images/food.png" alt="food image" width="650px">
-</div>
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="prices">
-    <div class="price">
-        <img src="./images/price11.png" alt="Dog Food price" width="650px">
-        <div class="priceinfo">
-            <h1><span style="color: orangered">Air-Dried </span><br>Dog Food</h1>
-            <p>Handcrafted air-dried recipes with high inclusions of meat, seafood, organs, and bone in whole-prey
-                ratios.</p>
-            <h3 class="amount">Rs. 500.00 - Rs. 3500.00</h3>
-            <div>
-                <button class="buy">BUY</button>
-                <button class="buymore">VIEW MORE</button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet-Care-Centre Shop</title>
+    <link rel="icon" href="./images/animal.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <a href="#startover" class="startover">⟪⟪</a>
+    <header class="header" id="startover">
+        <div class="heading">
+            <img src="./images/animal.png" width="40px" height="40px" alt="Foot print icon">
+            <h1>Pet Care</h1>
+        </div>
+        <div class="options">
+            <img class="menu" onclick="navigatorFun()" src="./images/menu.png" width="40px" height="40px"
+                alt="menu icon">
+            <img class="cart" src="./images/store.png" width="40px" height="40px" alt="store icon">
+            <img class="user" onclick="signinFun()" src="./images/contact.png" width="40px" height="40px"
+                alt="contact icon">
+        </div>
+    </header>
+
+    <!-- Shop section -->
+    <div class="about" id="shop">
+        <div class="aboutinfo">
+            <p class="aboutheading"><span style="color: orangered;">Premium</span> Pet Food Manufacturer</p>
+            <div class="infocontainer">
+                <div class="infoitem">
+                    <img src="./images/heart.png" alt="heart icon" width="80px">
+                    <p>SUPERIOR SAFETY PRACTICES</p>
+                </div>
+                <div class="infoitem">
+                    <img src="./images/leg-piece.png" alt="leg-piece icon" width="80px">
+                    <p>EXCEPTIONAL INGREDIENT QUALITY</p>
+                </div>
+                <div class="infoitem">
+                    <img src="./images/thermometer.png" alt="thermometer icon" width="80px">
+                    <p>OPTIMAL DRYING AIR TEMPERATURES</p>
+                </div>
+                <div class="infoitem">
+                    <img src="./images/trophy.png" alt="trophy icon" width="80px">
+                    <p>MADE BY NUTRITION EXPERTS</p>
+                </div>
+            </div>
+        </div>
+        <img class="foodimg" src="./images/food.png" alt="food image" width="650px">
+    </div>
+
+    <!--Price section -->
+    <div class="prices">
+        <div class="price">
+            <img src="./images/price11.png" alt="Dog Food price" width="650px">
+            <div class="priceinfo">
+                <h1><span style="color: orangered">Air-Dried </span><br>Dog Food</h1>
+                <p>Handcrafted air-dried recipes with high inclusions of meat, seafood, organs, and bone in whole-prey
+                    ratios.</p>
+                <h3 class="amount">Rs. 500.00 - Rs. 3500.00</h3>
+                <div>
+                    <button class="buy">BUY</button>
+                </div>
+            </div>
+        </div>
+        <div class="price">
+            <div class="priceinfo">
+                <h1><span style="color: orangered">Air-Dried </span><br>Cat Food</h1>
+                <p>Handcrafted air-dried recipes with high inclusions of meat, seafood, organs, and bone in whole-prey
+                    ratios.</p>
+                <h3 class="amount">Rs. 350.00 - Rs. 3200.00</h3>
+                <div>
+                    <button class="buy">BUY</button>
+                </div>
+            </div>
+            <img src="./images/price22.png" alt="Dog Food price" width="650px">
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="contacts" id="contact">
+        <div class="contactbox">
+            <div class="box1">
+                <div class="contactheading">
+                    <img src="./images/animal.png" width="40px" height="40px" alt="Foot print icon">
+                    <h1>Pet Care</h1>
+                </div>
+                <div class="contacticons">
+                    <img src="./images/whatsapp.png" alt="Whatsapp image" width="45px">
+                    <img src="./images/facebook.png" alt="Facebook image" width="50px">
+                    <img src="./images/insta.png" alt="Instagram image" width="50px">
+                </div>
+                <div class="terms">
+                    <p>© 2024 N. Kajenthiran. All rights reserved.</p>
+                </div>
+            </div>
+            <div class="box2">
+                <h1>About</h1>
+                <p>35/7, St. Rita's Road,<br>Mount-Lavinia,<br>Colombo.</p>
+                <br>
+                <p>074 074 9695</p>
+                <p>075 074 9652</p>
+                <br>
+                <p>Mon - Sun: 8AM - 9PM</p>
+            </div>
+            <div class="box3">
+                <h1>Quick Links</h1>
+                <a href="#dogservices">Dog Boarding Services</a>
+                <br>
+                <br>
+                <a href="#services">Cat Boarding Services</a>
+                <br>
+                <br>
+                <a href="#shop">Premium Pet Foods</a>
+            </div>
+            <div class="box4">
+                <h1>Newsletter</h1>
+                <input type="text" placeholder="Enter your email" class="subscribemail">
+                <br>
+                <button class="subscribe" onclick="clearInput()">SUBSCRIBE</button>
+                <p>Terms of Service</p>
+                <p>Privacy Policy</p>
             </div>
         </div>
     </div>
-    <div class="price">
-        <div class="priceinfo">
-            <h1><span style="color: orangered">Air-Dried </span><br>Cat Food</h1>
-            <p>Handcrafted air-dried recipes with high inclusions of meat, seafood, organs, and bone in whole-prey
-                ratios.</p>
-            <h3 class="amount">Rs. 350.00 - Rs. 3200.00</h3>
-            <div>
-                <button class="buy">BUY</button>
-                <button class="buymore">VIEW MORE</button>
-            </div>
-        </div>
-        <img src="./images/price22.png" alt="Dog Food price" width="650px">
-    </div>
-</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
