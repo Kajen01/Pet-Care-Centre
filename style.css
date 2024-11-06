@@ -993,6 +993,313 @@ html.no-scroll {
     text-decoration: underline;
 }
 
+
+/* Mobile (small screens) */
+@media (max-width: 600px) {
+    /* General */
+    body {
+        font-size: 14px;
+    }
+    
+    /* Header section */
+    .header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .heading h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .navigators {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .navigators a {
+        font-size: 20px;
+    }
+
+    .options img {
+        margin-right: 10px;
+    }
+
+    /* User section */
+    .signin,
+    .signup,
+    .forget {
+        width: 220px;
+        right: 20px;
+    }
+
+    .homepage img {
+        left: -300px;
+        width: 70%;
+    }
+
+    .hometitle {
+        font-size: 50px;
+        left: 20px;
+    }
+
+    .homeinfo {
+        font-size: 30px;
+        left: 20px;
+    }
+
+    .fordogs,
+    .forcats {
+        width: 200px;
+        font-size: 25px;
+    }
+
+    .food2 {
+        left: 30px;
+        top: 90px;
+    }
+
+    .aboutus h1 {
+        font-size: 35px;
+    }
+
+    .aboutus p {
+        font-size: 20px;
+    }
+
+    /* About section */
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .card h1 {
+        font-size: 25px;
+    }
+
+    .card p {
+        font-size: 15px;
+    }
+
+    .price {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .priceinfo h1 {
+        font-size: 40px;
+    }
+
+    .priceinfo p {
+        font-size: 20px;
+    }
+
+    .amount {
+        font-size: 30px;
+    }
+
+    .buy,
+    .buymore {
+        width: 220px;
+        font-size: 20px;
+    }
+
+    /* Cat Boarding and Dog Kennels */
+    .catboarding,
+    .dogkennels {
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .catcontainer h2,
+    .dogcontainer h2 {
+        font-size: 50px;
+    }
+
+    .catcontainer p,
+    .dogcontainer p {
+        font-size: 18px;
+    }
+
+    .caticons,
+    .dogicons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .eat,
+    .play,
+    .sleep {
+        width: 100%;
+        justify-content: center;
+        font-size: 18px;
+    }
+
+    .booking,
+    .viewmore {
+        width: 220px;
+        font-size: 20px;
+    }
+}
+
+/* Tablets (medium screens) */
+@media (max-width: 900px) {
+    /* General */
+    body {
+        font-size: 16px;
+    }
+
+    /* Header section */
+    .header {
+        padding: 20px;
+    }
+
+    .heading h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .navigators {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .navigators a {
+        font-size: 22px;
+    }
+
+    .options img {
+        margin-right: 20px;
+    }
+
+    /* User section */
+    .signin,
+    .signup,
+    .forget {
+        width: 250px;
+        right: 50px;
+    }
+
+    .homepage img {
+        left: -400px;
+        width: 80%;
+    }
+
+    .hometitle {
+        font-size: 70px;
+        left: 20px;
+    }
+
+    .homeinfo {
+        font-size: 35px;
+        left: 20px;
+    }
+
+    .fordogs,
+    .forcats {
+        width: 230px;
+        font-size: 30px;
+    }
+
+    .food2 {
+        left: 40px;
+        top: 80px;
+    }
+
+    .aboutus h1 {
+        font-size: 40px;
+    }
+
+    .aboutus p {
+        font-size: 25px;
+    }
+
+    /* About section */
+    .cards {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    .card h1 {
+        font-size: 30px;
+    }
+
+    .card p {
+        font-size: 18px;
+    }
+
+    .price {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .priceinfo h1 {
+        font-size: 50px;
+    }
+
+    .priceinfo p {
+        font-size: 25px;
+    }
+
+    .amount {
+        font-size: 35px;
+    }
+
+    .buy,
+    .buymore {
+        width: 230px;
+        font-size: 22px;
+    }
+
+    /* Cat Boarding and Dog Kennels */
+    .catboarding,
+    .dogkennels {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .catcontainer h2,
+    .dogcontainer h2 {
+        font-size: 60px;
+    }
+
+    .catcontainer p,
+    .dogcontainer p {
+        font-size: 22px;
+    }
+
+    .caticons,
+    .dogicons {
+        flex-direction: row;
+    }
+
+    .eat,
+    .play,
+    .sleep {
+        width: 120px;
+    }
+
+    .booking,
+    .viewmore {
+        width: 230px;
+        font-size: 22px;
+    }
+}
+
 /* Media query */
 
 @media screen and (max-width: 768px) {
